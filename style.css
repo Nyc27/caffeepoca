@@ -510,6 +510,7 @@ li a:hover::after{
     position: relative;
     width: 80%;
     height: fit-content;
+    overflow-x: hidden;
 }
 
 
