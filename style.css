@@ -583,7 +583,8 @@ li a:hover::after{
         padding: 2em;
         display: block;
         margin-inline: auto;
-        margin-block: 30px;
+        margin-top: 30px;
+        margin-bottom: 30px;
         width: 80%;
     }
 
