@@ -530,6 +530,7 @@ li a:hover::after{
     position: relative;
     width: 100%;
     margin-inline: auto;
+    margin-block: 0;
 }
 
 .mappa-iframe{
@@ -584,13 +585,15 @@ li a:hover::after{
         padding: 2em;
         /*top: -30px;*/
         margin-inline: auto;
-        margin-block: 30px;
-        height: auto;
         width: 80%;
     }
 
     .contenitore-mappa{
         width: 100%;
+    }
+
+    .mappa{
+    margin-block: 30px;
     }
 }
 
