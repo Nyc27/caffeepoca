@@ -576,15 +576,15 @@ li a:hover::after{
 
     .mappa-text{
         position: relative;
-        left: 0;
         text-align: left;
         color: white;
         background-color: var(--grigio);
         padding: 2em;
-        display: block;
+        /*top: -30px;*/
+        display: contents;
         margin-inline: auto;
         margin-block: 30px;
-        height: max-content;
+        height: fit-content;
         width: 80%;
     }
 
