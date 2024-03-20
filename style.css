@@ -575,16 +575,17 @@ li a:hover::after{
     }
 
     .mappa-text{
+        display: block;
         position: relative;
+        left: 0;
         text-align: left;
         color: white;
         background-color: var(--grigio);
         padding: 2em;
         /*top: -30px;*/
-        display: contents;
         margin-inline: auto;
         margin-block: 30px;
-        height: fit-content;
+        height: auto;
         width: 80%;
     }
 
