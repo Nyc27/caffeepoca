@@ -553,6 +553,7 @@ li a:hover::after{
     left: -40px;
     rotate: -45deg;
     background-color: white;
+    margin-top: 30px;
 }
 
 .mappa::after{
@@ -586,10 +587,6 @@ li a:hover::after{
         margin-top: 30px;
         margin-bottom: 30px;
         width: 80%;
-    }
-
-    .mappa-iframe{
-        margin-top: 30px;
     }
 
     .contenitore-mappa{
