@@ -572,6 +572,7 @@ li a:hover::after{
     .mappa{
         width: 100%;
         aspect-ratio: 16 / 12;
+        margin-top: 30px;
     }
 
     .mappa-text{
