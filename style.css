@@ -553,7 +553,6 @@ li a:hover::after{
     left: -40px;
     rotate: -45deg;
     background-color: white;
-    margin-top: 30px;
 }
 
 .mappa::after{
@@ -584,8 +583,8 @@ li a:hover::after{
         padding: 2em;
         display: block;
         margin-inline: auto;
-        margin-top: 30px;
-        margin-bottom: 30px;
+        margin-block: 30px;
+        height: max-content;
         width: 80%;
     }
 
