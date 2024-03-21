@@ -590,7 +590,7 @@ li a:hover::after{
     .contenitore-mappa{
         display: flex;
         flex-direction: column;
-        gap: 300px;
+        gap: 30px;
         width: 100%;
     }
 }
