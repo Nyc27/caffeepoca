@@ -546,6 +546,7 @@ li a:hover::after{
     width: 70px;
     aspect-ratio: 1;
     box-shadow: 0px 10px 10px -10px black;
+    z-index: 5;
 }
 
 .mappa::before{
@@ -565,9 +566,6 @@ li a:hover::after{
 @media (max-width: 960px){
 
     .mappa-section{
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
         margin-block: 50px;
         h2{ margin-bottom: 0px;}
     }
@@ -590,6 +588,9 @@ li a:hover::after{
     }
 
     .contenitore-mappa{
+        display: flex;
+        flex-direction: column;
+        gap: 300px;
         width: 100%;
     }
 }
