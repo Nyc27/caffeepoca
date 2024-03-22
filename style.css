@@ -24,6 +24,7 @@
     /* WEIGHT */
 
     --light: 200;
+    --semi-light: 300;
     --regular: 400;
     --mid: 500;
     --semi-bold: 600;
@@ -785,3 +786,180 @@ footer{
         }
     }
 }
+
+
+/* MENU */
+
+/* COLAZIONE */
+
+/* HERO COLAZIONE */
+
+.hero-menus{
+    position: relative;
+    height: 60vh;
+
+    img{
+        position: fixed;
+        width: 100%;
+        height: 60vh;
+        object-fit: cover;
+        z-index: -2;
+        
+        }
+
+    h1{
+        font-size: 6rem;
+        color: white;
+        text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        transform: translateY(-50%);
+        width: 50%;
+        z-index: 15;
+    }
+}
+
+.hero-menus::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: radial-gradient(circle at 0% 40%, rgba(0, 0, 0, .25), rgba(0, 0, 0, 0));
+    z-index: -1;
+}
+
+@media (max-width: 560px) {
+
+    .hero-menus{
+        position: relative;
+        height: 50vh;
+    
+        h1{
+            font-size: 5.5rem;
+            width: min-content;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            min-width: 250px;
+        }
+    }
+
+    .hero-menus::before{
+        background: radial-gradient(circle at center, rgba(0, 0, 0, .25), rgba(0, 0, 0, 0));
+    }
+
+}
+
+
+/*  MAIN COLAIZONI */
+
+.menu-section{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    gap: 70px;
+    padding-block: 80px;
+    background: white;
+    z-index: 10;
+    
+    
+    h2{ 
+        margin-bottom: 20px;
+    }
+
+    h3{
+        font-family: var(--ff-p);
+        font-weight: var(--semi-light);
+        margin-bottom: 7px ;
+    }
+
+    & > *{ position: relative;}
+
+    & > *:not(:last-child)::after{
+        content: '';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -34px;
+        width: 90%;
+        height: 2px;
+        background-color: var(--rosso);
+    }
+}
+
+
+
+.tipo-di-portata{
+    margin-left: 5%
+}
+
+.portate-del-menu{
+    display: grid;
+    width: 80%;
+    margin-left: 1%;
+    gap: 20px;
+}
+
+.bevande-colazione{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 25px;
+}
+
+.cibo-colazione{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 25px;
+
+}
+
+
+@media (min-width: 1300px) {
+
+    .tipo-di-portata h2{
+        margin-left: 19%;
+    }
+
+    .portate-del-menu{
+        width: 60%;
+        margin-inline: auto;
+    }
+
+    .menu-section{
+        
+        & > *:not(:last-child)::after{
+        content: '';
+        position: absolute;
+        left: 45%;
+        transform: translateX(-50%);
+        bottom: -34px;
+        width: 40%;
+        height: 2px;
+        background-color: var(--rosso);
+        }
+    }
+}
+
+@media (max-width: 580px) {
+
+    .tipo-di-portata *{
+        grid-template-columns: 1fr;
+        align-self: center;
+        text-align: left;
+        
+    }
+
+    .portate-del-menu{
+        display: grid;
+        width: 90%;
+        margin-left: 0;
+        margin-inline: auto;
+    }
+
+}
+
+
