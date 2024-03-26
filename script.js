@@ -21,7 +21,6 @@ const tendinaButtons = document.querySelectorAll('.tendina-button');
         tendinaButton.addEventListener('click', function () {
         const tendina = this.querySelector('.tendina');
         tendina.classList.toggle('show-mobile');
-        event.preventDefault()
     });
 
         tendinaButton.addEventListener('mouseenter', function (){
