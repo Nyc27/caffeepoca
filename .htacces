@@ -1,0 +1,10 @@
+#Abilita la Riscrittura
+RewriteEngine On
+
+# Reindirizzamento dalla radice del sito a /home senza cambiare l'URL
+RewriteRule ^$ /home.html
+
+# Rimozione dell'estensione .html
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^([^/]+)/?$ $1.html [L]
