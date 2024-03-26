@@ -87,7 +87,7 @@ h4{
 
 p{ font-family: var(--ff-p); font-weight: var(--regular);}
 
-a{  text-decoration: none; color: currentColor;}
+a{  text-decoration: none; color: currentColor; font-family: var(--ff-p);}
 
 li{ list-style: none;}
 
@@ -104,6 +104,8 @@ header{
     z-index: 100;
     box-shadow: 0 10px 10px var(--shadow);
 
+
+    a{ font-family: var(--ff-header);}
 }
 
 .desktop-nav{
@@ -217,7 +219,7 @@ li a{
 
 
 
-a::after{
+li a::after{
     content:'';
     position:absolute;
     bottom:-4px;
@@ -229,7 +231,7 @@ a::after{
     width:100%;
 }
 
-a:hover::after{
+li a:hover::after{
             transform:scaleX(1);
 }
 
@@ -249,7 +251,7 @@ a:hover::after{
 }
 
 
-.mobile-nav, .mobile-nav-toggle{ display: none}
+.mobile-nav, .mobile-nav-toggle, .mobile-header{ display: none}
 
 .visually-hidden{
     position: absolute;
@@ -271,10 +273,15 @@ a:hover::after{
 
     .desktop-nav{ display: none;}
 
-    header.white-bg{
-        background: white;
-        -webkit-backdrop-filter: none;
-        backdrop-filter: none;
+    .mobile-header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+
+        a{ margin-inline: 2%;}
+
+        button{ margin-inline: 2%;}
     }
 
     .mobile-nav{
@@ -310,7 +317,6 @@ a:hover::after{
         display: flex;
         flex-direction: column;
         gap: 5px;
-        margin-inline: auto;
         padding-block: 10px;
         width: 35px;
         background: none;
