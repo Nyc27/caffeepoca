@@ -10,6 +10,8 @@ mobileToggle.addEventListener('click', function () {
         icon.classList.toggle('open')
     })
 
+    document.body.classList.toggle('no-scroll')
+
 })
 
 const tendinaButtons = document.querySelectorAll('.tendina-button');
@@ -19,6 +21,7 @@ const tendinaButtons = document.querySelectorAll('.tendina-button');
         tendinaButton.addEventListener('click', function () {
         const tendina = this.querySelector('.tendina');
         tendina.classList.toggle('show-mobile');
+        event.preventDefault()
     });
 
         tendinaButton.addEventListener('mouseenter', function (){
