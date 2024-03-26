@@ -873,6 +873,10 @@ li a:hover::after{
 
     }
 
+    .portate-del-menu.cocktail-classici-aperitivi{
+        grid-template-columns: 1fr;
+    }
+
     .portate-del-menu{
         display: grid;
         width: 90%;
