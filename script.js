@@ -10,7 +10,7 @@ mobileToggle.addEventListener('click', function () {
         icon.classList.toggle('open')
     })
 
-    document.body.classList.toggle('no-scroll')
+    document.body.classList.toggle('no-scroll');
 
 })
 
@@ -21,6 +21,7 @@ const tendinaButtons = document.querySelectorAll('.tendina-button');
         tendinaButton.addEventListener('click', function () {
         const tendina = this.querySelector('.tendina');
         tendina.classList.toggle('show-mobile');
+        
     });
 
         tendinaButton.addEventListener('mouseenter', function (){
@@ -44,6 +45,22 @@ const tendinaButtons = document.querySelectorAll('.tendina-button');
     });
 
 });
+
+
+window.onload = function () {
+    const sezioneScroll = document.querySelector('.hero-home-imgs');
+    // Calcola la larghezza del contenitore
+    var sezioneScrollWidth = sezioneScroll.offsetWidth;
+
+    // Specifica l'offset percentuale desiderato (ad esempio, il 10%)
+    var percentOffset = 17.5;
+
+    // Calcola l'offset in pixel utilizzando la percentuale
+    var pixelOffset = (sezioneScrollWidth * percentOffset) / 100;
+
+    // Imposta lo scroll con l'offset calcolato
+    sezioneScroll.scrollLeft = sezioneScroll.children[1].offsetLeft - pixelOffset;
+}
 
 
 
