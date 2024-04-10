@@ -239,6 +239,7 @@ li a:hover::after{
 
 .cta-nav{
     background-color: var(--rosso);
+    font-family: var(--ff-header);
     color: white;
     font-size: 2.9rem;
     text-transform: uppercase;
@@ -273,15 +274,29 @@ li a:hover::after{
 
     .desktop-nav{ display: none;}
 
+    header{
+        background-image: none;
+    }
+
     .mobile-header{
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
         width: 100%;
 
         a{ margin-inline: 2%;}
 
         button{ margin-inline: 2%;}
+    }
+
+    .mobile-header::after{
+        content: '';
+        width: 100vw;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(20px);
     }
 
     .mobile-nav{
@@ -331,6 +346,7 @@ li a:hover::after{
         width: 35px;
         height: 3px;
         transition: transform 1.3s, opacity 400ms linear;
+        z-index: 999;
     }
 
     .open.icon-row-a {
@@ -348,10 +364,9 @@ li a:hover::after{
     }
 
     .tendina-button-text{
-        align-self: center;
+        display: block;
         text-align: center;
-        left: 50%;
-        transform: translateX(-50%);
+        margin-inline: auto;
     }
 
     .tendina{
@@ -374,8 +389,7 @@ li a:hover::after{
         display: block;
         position: relative;
         top: 0px;
-        left: 50%;
-        transform: translateX(-50%);
+        margin: 0;
     }
 
     .cta-nav{ margin: 0;
@@ -467,16 +481,13 @@ li a:hover::after{
 
     .hero-home-imgs{
         display: flex;
-        flex-direction: column;
         align-items: center;
-        justify-content: center;
-        background-image: url(img/hero-bg-marmo.png);
-        background-repeat: no-repeat;
-        background-size: 100% 30%;
-        background-repeat: repeat-y;
+        justify-content: flex-start;
+        background-image: none;
         padding-block: 20px;
+        overflow-x: auto;
 
-        img:not(.img-centrale){
+        img{
             width: 65%
         }
     }
@@ -548,7 +559,7 @@ li a:hover::after{
     display: block;
     margin-inline: auto;
     text-align: center;
-    margin-block: 55px;
+    margin-block: 100px;
 
     h2{ margin-bottom: 30px;}
 }
@@ -590,6 +601,10 @@ li a:hover::after{
        width: 80%;
     }
 
+   &:first-of-type p:first-of-type{
+        margin-bottom: 10px;
+    }
+
     .stelle{
         display: block;
         margin-inline: auto;
@@ -599,6 +614,9 @@ li a:hover::after{
 }
 
 @media (max-width: 880px) {
+
+    .review-section{ margin-block: 50px;}
+
     .reviews{
         flex-direction: column;
         gap: 40px;
@@ -612,6 +630,17 @@ li a:hover::after{
     }
 }
 
+.cta-mid{
+    display: block;
+    background-color: var(--rosso);
+    font-family: var(--ff-header);
+    color: white;
+    font-size: 2.9rem;
+    text-transform: uppercase;
+    margin-inline: auto;
+    padding-inline: .54em;
+    width: max-content;
+}
 
 /* MAPPA */
 
@@ -837,6 +866,12 @@ li a:hover::after{
 .portate-del-menu.cocktail-classici-aperitivi{
     grid-template-columns: 1fr 1fr 1fr;
 }
+
+#bevande{ scroll-margin-top: 100px;}
+
+#cibo{ scroll-margin-top: 100px;}
+
+#cocktail-classici{ scroll-margin-top: 100px;}
 
 @media (min-width: 1300px) {
 
